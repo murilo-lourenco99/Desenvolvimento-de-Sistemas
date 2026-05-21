@@ -1,0 +1,26 @@
+main {
+    height: 100%;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+
+section {
+    height: 90%;
+    padding: 2rem;
+    background-color: yellow;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+section p {
+    font-size: large;
+    font-weight: light;
+    background-color: brown;
+    border-radius: 1rem;
+}

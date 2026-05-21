@@ -1,0 +1,119 @@
+body {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+}
+
+header {
+  height: 40%;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  color: #161616;
+  opacity: 1;
+}
+
+header img {
+  width: auto;
+  height: 100%;
+}
+
+main {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+aside {
+  height: 100vh;
+  width: 30%;
+  background-color: #d9d9d9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+aside img {
+  width: 100%;
+}
+
+.quest1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.quest1 img {
+  width: 100%;
+  height: 100%;
+}
+
+.linha {
+  background-color: #f0f0f0;
+  transform: skewY(5deg); /* Inclina o quadrado */
+  width: 100%;
+  height: auto;
+  color: transparent;
+}
+
+/*
+.linha {
+  width: 100%;
+  height: auto;
+  background: linear-gradient(to top right, transparent 49%, #000 50%, #000 51%, transparent 51%);
+}
+  */
+
+
+section {
+  display: flex;
+  flex-direction: column;
+  height: 60%;
+  width: 50%;
+  text-align: left;
+  padding: 2rem;
+}
+
+section div {
+  margin-bottom: 1rem;
+  border: 0.2rem solid #d9d9d9;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  box-shadow: #161616 0.1em 0.1em 0.2em;
+}
+
+.quest2 {
+    height: 100%;
+    background-color: #1a63ffd3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.iggy {
+  width: 100%;
+  height: auto;
+}
+
+.quest4 {
+  padding: 1rem;
+}
+
+.quest4 img {
+  border-radius: 2rem;
+}
