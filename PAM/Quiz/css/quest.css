@@ -48,65 +48,39 @@ aside img {
   width: 100%;
 }
 
-.quest1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  padding: 2rem;
+section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  grid-template-rows: 1fr 1fr;
+  height: 60%;
+  width: 50%;
   box-sizing: border-box;
 }
 
-.quest1 img {
-  width: 100%;
-  height: 100%;
-}
-
-.linha {
-  background-color: #f0f0f0;
-  transform: skewY(5deg); /* Inclina o quadrado */
-  width: 100%;
-  height: auto;
-  color: transparent;
-}
-
-/*
-.linha {
-  width: 100%;
-  height: auto;
-  background: linear-gradient(to top right, transparent 49%, #000 50%, #000 51%, transparent 51%);
-}
-  */
-
-
-section {
-  display: flex;
-  flex-direction: column;
-  height: 60%;
-  width: 50%;
-  text-align: left;
-  padding: 2rem;
-}
-
 section div {
-  margin-bottom: 1rem;
+  width: auto;
+  height: auto;
   border: 0.2rem solid #d9d9d9;
   border-radius: 0.5rem;
   padding: 0.5rem;
   box-shadow: #161616 0.1em 0.1em 0.2em;
+  text-align: left;
+}
+
+.quest1 img {
+  width: auto;
+  height: 100%;
 }
 
 .quest2 {
-    height: 100%;
-    background-color: #1a63ffd3;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
+  background-color: #1a63ffd3;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .iggy {
-  width: 100%;
   height: auto;
 }
 
