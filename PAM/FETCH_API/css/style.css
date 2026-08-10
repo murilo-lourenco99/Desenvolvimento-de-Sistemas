@@ -1,0 +1,32 @@
+tr,
+td,
+th {
+  border: solid #000000 1px;
+}
+
+tr td,
+tr th {
+  text-align: justify;
+  padding: 5px;
+}
+
+header {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 5px;
+  width: 100%;
+}
+
+a {
+  list-style: none;
+  text-decoration: none;
+  color: #070594;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
