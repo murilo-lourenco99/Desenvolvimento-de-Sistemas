@@ -1,35 +1,33 @@
-// 1. Dados que vão entrar na tabela
-const pessoas = [
-    { nome: "Ana", idade: 25 },
-    { nome: "Bruno", idade: 30 }
-];
+// Substitua pela URL da sua API ou arquivo JSON
+const url = "https://fakestoreapi.com/users";
 
-// 2. Criar os elementos HTML principais
-const tabela = document.createElement("table");
-const cabecalho = document.createElement("tr");
+async function atualizarTabela() {
+    try {
+        // 1. Busca os dados na URL
+        const resposta = await fetch(url);
+        const dados = await resposta.json();
 
-// 3. Montar o cabeçalho
-["Nome", "Idade"].forEach(texto => {
-    const th = document.createElement("th");
-    th.textContent = texto;
-    cabecalho.appendChild(th);
-});
-tabela.appendChild(cabecalho);
+        // 2. Captura o corpo da tabela existente
+        const tbody = document.getElementById("minha-tabela").querySelector("tbody");
 
-// 4. Inserir linhas automáticas com os dados
-pessoas.forEach(dado => {
-    const linha = document.createElement("tr");
+        // 3. Limpa as linhas antigas para não duplicar (remova se quiser apenas somar)
+        tbody.innerHTML = "";
 
-    const celulaNome = document.createElement("td");
-    celulaNome.textContent = dado.nome;
-    linha.appendChild(celulaNome);
+        // 4. Cria e adiciona as novas linhas automaticamente
+        dados.forEach(item => {
+            const novaLinha = tbody.insertRow(); // Cria um <tr> automático
 
-    const celulaIdade = document.createElement("td");
-    celulaIdade.textContent = dado.idade;
-    linha.appendChild(celulaIdade);
+            const celulaNome = novaLinha.insertCell(); // Cria o primeiro <td>
+            celulaNome.textContent = item.nome;       // Insere o dado do nome
 
-    tabela.appendChild(linha);
-});
+            const celulaIdade = novaLinha.insertCell(); // Cria o segundo <td>
+            celulaIdade.textContent = item.idade;       // Insere o dado da idade
+        });
 
-// 5. Jogar a tabela pronta dentro do HTML
-document.getElementById("tabela-aqui").appendChild(tabela);
+    } catch (erro) {
+        console.error("Erro ao buscar dados da URL:", erro);
+    }
+}
+
+// Executa a função automaticamente ao carregar a página
+atualizarTabela();
