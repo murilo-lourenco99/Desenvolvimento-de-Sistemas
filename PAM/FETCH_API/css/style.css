@@ -7,8 +7,9 @@ th {
 tr td,
 tr th {
   text-align: justify;
-  padding: 5px;
+  padding: 1rem;
 }
+
 
 header {
   background-color: #000000;
