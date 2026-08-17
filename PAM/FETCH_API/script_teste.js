@@ -31,3 +31,47 @@ async function atualizarTabela() {
 
 // Executa a função automaticamente ao carregar a página
 atualizarTabela();
+
+
+async function carregarTodasAsTabelas() {
+    // 1. Procura todas as tabelas automáticas da página
+    const tabelas = document.querySelectorAll(".tabela-automatica");
+  
+    tabelas.forEach(async (tabela) => {
+      // 2. Pega a URL configurada no HTML daquela tabela específica
+      const url = tabela.getAttribute("data-url");
+      if (!url) return;
+  
+      try {
+        // 3. Busca os dados na API
+        const resposta = await fetch(url);
+        const dados = await resposta.json();
+  
+        const tbody = tabela.querySelector("tbody");
+        tbody.innerHTML = ""; // Limpa dados antigos
+  
+        // 4. Descobre quais colunas mapear com base no cabeçalho (th)
+        const ths = tabela.querySelectorAll("thead th");
+        const chavesDasColunas = Array.from(ths).map(th => th.getAttribute("data-chave"));
+  
+        // 5. Alimenta a tabela linha por linha
+        dados.forEach(item => {
+          const novaLinha = tbody.insertRow();
+  
+          // Cria cada célula combinando a ordem do HTML com o dado do JSON
+          chavesDasColunas.forEach(chave => {
+            const celula = novaLinha.insertCell();
+            // Insere o dado se ele existir no JSON, senão deixa vazio
+            celula.textContent = item[chave] !== undefined ? item[chave] : ""; 
+          });
+        });
+  
+      } catch (erro) {
+        console.error(`Erro ao carregar dados da tabela (${url}):`, erro);
+      }
+    });
+  }
+  
+  // Inicializa o script automaticamente ao carregar a página
+  document.addEventListener("DOMContentLoaded", carregarTodasAsTabelas);
+  

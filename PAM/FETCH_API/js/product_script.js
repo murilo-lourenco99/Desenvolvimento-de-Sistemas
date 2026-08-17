@@ -22,24 +22,3 @@ for (let i = 0; i < linhas.length; i++) {
 }
 
 console.log("Tabela pronta para preenchimento");
-
-// // Executa o código assim que o HTML da página estiver pronto
-// document.addEventListener("DOMContentLoaded", () => {
-
-//   fetch(url).then((dados) => {
-//     const corpoTabela = document.getElementById("corpoTabela");
-
-//     // Altere as propriedades (id, name, email) de acordo com o seu JSON
-//     dados.forEach((item) => {
-//       const novaLinha = corpoTabela.insertRow();
-
-//       const celulaID = novaLinha.insertCell(0);
-//       const celulaNome = novaLinha.insertCell(1);
-//       const celulaEmail = novaLinha.insertCell(2);
-
-//       celulaID.textContent = item.id;
-//       celulaNome.textContent = item.name;
-//       celulaEmail.textContent = item.email;
-//     });
-//   });
-// });
