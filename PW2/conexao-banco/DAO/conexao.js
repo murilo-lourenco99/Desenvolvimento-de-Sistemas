@@ -5,8 +5,8 @@ async function conexao() {
     host: "127.0.0.1",
     port: 3306,
     user: "root",
-    password: "123456",
-    database: "connection",
+    password: "1234",
+    database: "db_produto"
   });
   return pool;
 } // fechando a conexão

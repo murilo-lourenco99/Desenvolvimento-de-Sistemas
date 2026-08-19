@@ -1,9 +1,9 @@
 import { conexao } from "../conexao.js";
 
-async function buscraCliente() {
+async function buscarClientes() {
   console.log("DAO de Cliente");
 
-  const sql = `SELECT * FROM tbCliente;`;
+  const sql = `SELECT * FROM Cliente;`;
   const conn = await conexao();
 
   try {
@@ -14,3 +14,5 @@ async function buscraCliente() {
     return error.message
   }
 }
+
+export { buscarClientes };

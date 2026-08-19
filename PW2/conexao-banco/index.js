@@ -1,6 +1,7 @@
 import express from "express";
 
 import { buscarStatus, buscarStatusId } from "./DAO/status/buscarStatus.js";
+import { buscarClientes } from "./DAO/cliente/buscarCliente.js";
 
 const app = express();
 app.use(express.json());
@@ -10,6 +11,19 @@ app.get("/", (req, res) => {
 });
 
 // CONSULTAS
+
+// clientes
+app.get("/clientes", async (req, res) => {
+  try {
+    const clientes = await buscarClientes(); // requisição
+    res.json(clientes); // resposta
+  } catch (error) {
+    res.status(500).json({
+      error: "Erro ao buscar clientes",
+      detalhes: error.message,
+    });
+  }
+});
 
 // status
 app.get("/status", async (req, res) => {
@@ -23,25 +37,6 @@ app.get("/status", async (req, res) => {
     });
   }
 });
-
-// status por ID
-app.get("/status/:id", async (req, res) => {
-  try {
-    const { id } = req.params;
-    const status = await buscarStatusId(id);
-    if (!status) {
-      return res.status(404).json({ error: "Status não encontrado" });
-    }
-    res.json(status);
-  } catch (error) {
-    res.status(500).json({
-      erro: "Erro ao buscar status",
-      detalhes: erro.message,
-    });
-  }
-});
-
-// clientes
 
 
 // Inicialização do Servidor

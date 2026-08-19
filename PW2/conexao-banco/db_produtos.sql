@@ -10,7 +10,7 @@ CREATE TABLE tbStatus (
 
 DROP TABLE tbStatus;
     
-CREATE TABLE tbCliente (
+CREATE TABLE Cliente (
     idCliente INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,
     logradouro VARCHAR(100) NOT NULL,
@@ -22,7 +22,7 @@ CREATE TABLE tbCliente (
         REFERENCES tbStatus (idStatus)
 );
 
-DROP TABLE tbCliente;
+DROP TABLE Cliente;
 
 -- inserir dados
 INSERT INTO tbStatus (nome) VALUES
@@ -30,14 +30,14 @@ INSERT INTO tbStatus (nome) VALUES
     ('REGULAR'),
     ('RUIM');
     
-INSERT  INTO  tbcliente (nome, logradouro, numero, idStatus, limite_de_credito) VALUES
+INSERT  INTO  Cliente (nome, logradouro, numero, idStatus, limite_de_credito) VALUES
 	('Rayer - Traidor', 'Rua da Sorte', 66, 1, 0.50 ) ,
 	('Pimental Moedas', 'Av. dos Texteis', 77, 2, 0.25 ),
 	( 'Emanuel Pisadinha', 'Embaixo da Ponte', 15, 2, 0.11);
     
 -- Consultas
-SELECT * FROM tbCliente;
+SELECT * FROM Cliente;
 
-SELECT nome, (limite_de_credito * 100) AS limite_centavos FROM tbCliente;
+SELECT nome, (limite_de_credito * 100) AS limite_centavos FROM Cliente;
 
 SELECT * FROM tbStatus;
