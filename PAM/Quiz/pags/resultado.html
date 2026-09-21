@@ -24,20 +24,83 @@
     <main class="resultado-quiz" data-tema="padrao">
         <section>
             <h1 class="titulo-resultado" alt="Você seria...">
-                
             </h1>
 
             <p class="descricao-resultado" alt="resultado">
             </p>
         </section>
+
+        <aside>
+            <img class="img-resultado" src="../img/" alt="JoJoIMG">
+        </aside>
+
+        <article>
+            <table class="dados-usuario">
+                <caption>
+                    <h2>Dados do Usuário</h2>
+                </caption>
+                <tbody>
+                    <tr>
+                        <th scope="row"><label>Nome:</label></th>
+                        <td> <span></span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><label>Email:</label></th>
+                        <td> <span></span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><label>Idade:</label></th>
+                        <td> <span></span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><label>Parte favorita:</label></th>
+                        <td> <span></span> </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><label>Sexo:</label></th>
+                        <td> <span></span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="bar_chart">
+                <canvas id="bar_chart"></canvas>
+            </div>
+
+            <div class="placar-quiz">
+                <h2>Placar de Resultados</h2>
+                <div id="container-placar">
+                    <div class="linha_pontuacao" id="rank_1"><strong>1º Lugar</strong> <span class="nome_jojo"></span>:
+                        <span class="pontos_jojo"></span>
+                    </div>
+                    <div class="linha_pontuacao" id="rank_2"><strong>2º Lugar</strong> <span class="nome_jojo"></span>:
+                        <span class="pontos_jojo"></span>
+                    </div>
+                    <div class="linha_pontuacao" id="rank_3"><strong>3º Lugar</strong> <span class="nome_jojo"></span>:
+                        <span class="pontos_jojo"></span>
+                    </div>
+                    <div class="linha_pontuacao" id="rank_4"><strong>4º Lugar</strong> <span class="nome_jojo"></span>:
+                        <span class="pontos_jojo"></span>
+                    </div>
+                    <div class="linha_pontuacao" id="rank_5"><strong>5º Lugar</strong> <span class="nome_jojo"></span>:
+                        <span class="pontos_jojo"></span>
+                    </div>
+                    <div class="linha_pontuacao" id="rank_6"><strong>6º Lugar</strong> <span class="nome_jojo"></span>:
+                        <span class="pontos_jojo"></span>
+                    </div>
+                    <div class="linha_pontuacao" id="rank_7"><strong>7º Lugar</strong> <span class="nome_jojo"></span>:
+                        <span class="pontos_jojo"></span>
+                    </div>
+                    <div class="linha_pontuacao" id="rank_8"><strong>8º Lugar</strong> <span class="nome_jojo"></span>:
+                        <span class="pontos_jojo"></span>
+                    </div>
+                </div>
+            </div>
+        </article>
     </main>
 
-    <aside>
-        <img class="img-resultado" src="../img/" alt="JoJoIMG">
-    </aside>
-
     <footer>
-        <a href="../index.html">
+        <a href="../cadastro.html">
             <img class="jogarNovamente" src="../img/continua.png">
         </a>
     </footer>

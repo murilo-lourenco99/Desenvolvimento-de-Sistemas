@@ -10,15 +10,15 @@ function guardarResposta(resposta) {
 document.addEventListener("DOMContentLoaded", async () => {
   let dados_json = await get_json();
 
-  const input_opcao = document.querySelectorAll(".q1, .q2, .q3, .q4");
+  const input_opcao = document.querySelectorAll(".q1, .q2");
 
   // Recebe o atributo data da pagina do html
   input_opcao.forEach((opcao) => {
     opcao.addEventListener("click", (event) => {
-      // 1. Evita a navegação imediata do link <a>
+      // 1. Evita a navegação imediata
       event.preventDefault();
 
-      // 2. Salva o texto da opção selecionada no sessionStorage
+      // 2. Salva o texto da opção selecionada
       const tagH2 = opcao.querySelector("h2");
       if (tagH2) {
         const textoResposta = tagH2.textContent.trim();

@@ -1,26 +1,30 @@
 import { get_json } from "./main.js";
 
-document.addEventListener("DOMContentLoaded", async () => {
-  let dados_json = await get_json();
+// Função para salvar a resposta no sessionStorage
+function guardarResposta(resposta) {
+    let respostasSalvas = JSON.parse(sessionStorage.getItem("respostas") || "[]");
+    respostasSalvas.push(resposta);
+    sessionStorage.setItem("respostas", JSON.stringify(respostasSalvas));
+}
 
-  const input_opcao = document.querySelectorAll(".q1, .q2");
+document.addEventListener("DOMContentLoaded", () => {
+    const opcoes = document.querySelectorAll(".grid1 div");
 
-  input_opcao.forEach((opcao) => {
-    opcao.addEventListener("click", (event) => {
-      let jojo_escolhido = opcao.getAttribute("data_jojo");
-      let jojo_escolhido_json = dados_json.find(
-        (j) => j.nome === jojo_escolhido,
-      );
+    opcoes.forEach((opcao) => {
+        opcao.addEventListener("click", (e) => {
+            e.preventDefault();
 
-      if (jojo_escolhido_json) {
-        jojo_escolhido_json.j += 1;
-        console.log(
-          `%c[Sucesso] +1 ponto para: ${jojo_escolhido_json.nome}. Total atual: ${jojo_escolhido_json.j}`,
-          "color: #2ecc71; font-weight: bold;",
-        );
+            // Pega o texto da opção selecionada (ex: "Hamon" ou "Stand")
+            const textoResposta = opcao.querySelector("h2").textContent.trim();
 
-        sessionStorage.setItem("pontuacao", JSON.stringify(dados_json));
-      }
+            // Grava a opção no sessionStorage
+            guardarResposta(textoResposta);
+
+            // Obtém o link para a próxima questão
+            const linkProximaPagina = opcao.querySelector("a").getAttribute("href");
+
+            // Redireciona para a próxima página
+            window.location.href = linkProximaPagina;
+        });
     });
-  });
 });

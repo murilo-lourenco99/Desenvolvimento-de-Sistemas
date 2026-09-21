@@ -1,22 +1,21 @@
 body {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
   align-items: center;
   flex-direction: column;
 }
 
 main {
-  height: 100%;
-  width: 50%;
+  height: 60%;
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 section {
   height: 80%;
-  width: 80%;
+  width: 50%;
   padding: 2rem;
   text-align: center;
   display: flex;
@@ -38,12 +37,13 @@ section {
 }
 
 aside {
-  width: 40%;
-  height: 50%;
+  width: 45%;
+  height: 100%;
   background-color: #b3b2b4;
   display: flex;
   justify-content: center;
   border-radius: 1rem;
+  margin: auto;
 }
 
 .img-resultado {
@@ -51,16 +51,51 @@ aside {
   height: 100%;
 }
 
-footer {
-  height: 50%;
-  width: 50%;
+article {
   display: flex;
-  justify-content: center;
+  background-color: #cfcfcf;
+  border-radius: 1rem;
+  padding: 1rem;
+  max-width: 50%;
+  align-items: center;
+}
+
+.dados-usuario {
+  z-index: 10;
+  margin-left: 100px;
+  width: 40%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.dados-usuario th {
+  text-align: left;
+}
+
+.placar-quiz {
+  height: auto;
+  width: 50%;
+}
+
+footer {
+  height: 100%;
+  width: auto;
+  display: flex;
   align-items: center;
 }
 
 .jogarNovamente {
   width: 80%;
+  margin-right: 140px;
+
+  z-index: 10;
+
+}
+
+.bar_chart{
+  width: 50%;
   height: 100%;
 }
 
@@ -78,10 +113,10 @@ footer {
 }
 
 [data-tema="jonathan"] .img-resultado {
-  content: url("../img/jojo1-img.jpg");
+  content: url("../img/jojo1-img.png");
 }
 
-[data-tema = "jonathan"] aside {
+[data-tema="jonathan"] aside {
   background-color: #1e12d0;
 }
 
@@ -98,7 +133,7 @@ footer {
   content: url("../img/jojo2-img.png");
 }
 
-[data-tema = "jonathan"] aside {
+[data-tema="joseph"] aside {
   background-color: #70bd14;
 }
 
@@ -115,7 +150,7 @@ footer {
   content: url("../img/jojo3-img.png");
 }
 
-[data-tema = "jotaro"] aside {
+[data-tema="jotaro"] aside {
   background-color: #9f17a7;
 }
 
@@ -132,8 +167,8 @@ footer {
   content: url("../img/jojo4-img.png");
 }
 
-[data-tema = "josuke4"] aside {
-  background-color: #67316A;
+[data-tema="josuke4"] aside {
+  background-color: #67316a;
 }
 
 /* PARTE 5 */
@@ -149,7 +184,7 @@ footer {
   content: url("../img/jojo5-img.png");
 }
 
-[data-tema = "giorno"] aside {
+[data-tema="giorno"] aside {
   background-color: #f4e9b3;
 }
 
@@ -166,8 +201,8 @@ footer {
   content: url("../img/jojo6-img.png");
 }
 
-[data-tema = "jolyne"] aside {
-  background-color: 	#0e326f;
+[data-tema="jolyne"] aside {
+  background-color: #0e326f;
 }
 
 /* PARTE 7 */
@@ -183,8 +218,8 @@ footer {
   content: url("../img/jojo7-img.png");
 }
 
-[data-tema = "johnny"] aside {
-  background-color: 		#fface9;
+[data-tema="johnny"] aside {
+  background-color: #fface9;
 }
 
 /* PARTE 8 */
@@ -200,6 +235,6 @@ footer {
   content: url("../img/jojo8-img.png");
 }
 
-[data-tema = "josuke8"] aside {
-  background-color: 	#f4c767;
+[data-tema="josuke8"] aside {
+  background-color: #f4c767;
 }

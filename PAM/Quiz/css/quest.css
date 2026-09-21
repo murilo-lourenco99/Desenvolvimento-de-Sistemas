@@ -50,22 +50,22 @@ aside img {
 
 section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
   height: 60%;
-  width: 50%;
+  width: 80%;
   box-sizing: border-box;
 }
 
 section div {
-  width: auto;
-  height: auto;
   border: 0.2rem solid #d9d9d9;
   border-radius: 0.5rem;
   padding: 0.5rem;
   box-shadow: #161616 0.1em 0.1em 0.2em;
-  text-align: left;
+  height: 30%;
+  width: auto;
+  display: flex;
+  align-items: center;
 }
 
 .quest1 img {
@@ -89,5 +89,30 @@ section div {
 }
 
 .quest4 img {
+  border-radius: 1rem;
+}
+
+.quest6 {
+  padding: 1rem;
+}
+
+.quest6 img {
+  border-radius: 1rem;
+}
+
+.quest7 {
+  padding: 2rem;
+}
+
+.quest7 img {
+  height: 100%;
   border-radius: 2rem;
+}
+
+.quest10 {
+  padding: 0;
+}
+
+.quest10 img {
+  width: 100%;
 }
