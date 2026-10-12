@@ -14,3 +14,20 @@ async function buscarUsuarios() {
     return error.message;
   }
 }
+
+async function buscarUsuarioPorNome(nome) {
+  console.log("DAO de Usuarios");
+
+  const sql = `SELECT nome FROM Usuario WHERE nome LIKE ?;`;
+  const conn = await conexao();
+
+  try {
+    const [rows, fields] = await conn.query(sql);
+    await conn.end();
+    return rows;
+  } catch (error) {
+    return error.message;
+  }
+}
+
+export { buscarUsuarioPorNome }

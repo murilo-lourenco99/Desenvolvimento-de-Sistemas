@@ -19,7 +19,7 @@ section,
 }
 
 section {
-  height: 35%;
+  height: auto;
   width: auto;
   display: flex;
   align-items: center;

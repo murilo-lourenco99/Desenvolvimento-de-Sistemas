@@ -6,8 +6,6 @@ const pool = mysql.createPool({
     user: "root",
     password: "1234",
     database: "quiz__db",
-    waitForConnections: true,
-    connectionLimit: 10
 });
 
 export async function testarConexao() {
