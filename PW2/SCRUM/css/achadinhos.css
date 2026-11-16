@@ -1,0 +1,113 @@
+/* Área flexível: centraliza também os cards incompletos da última linha. */
+.section-grid {
+  grid-area: items;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  align-content: start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #daa025;
+}
+
+.titulo-lista {
+  color: #3c2b0c;
+  margin: 0;
+}
+
+.status-item {
+  background-color: #e8f5e9;
+  color: #246b2b;
+}
+
+.titulo-header {
+  color: #3c2b0c;
+  width: 80%;
+}
+
+.btn-adicionar {
+  background-color: #3c2b0c;
+  color: #ffffff;
+  border: none;
+  padding: 1rem;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+/* Conteúdo de texto usado na Home e na página Sobre. */
+.conteudo-pagina {
+  grid-area: items;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  padding: 1.5rem;
+}
+
+.conteudo-pagina h2 {
+  margin-top: 0;
+}
+
+.conteudo-pagina a {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* Cartão padrão; o tamanho permite até três itens por linha em telas largas. */
+.caixa-item {
+  box-sizing: border-box;
+  flex: 0 1 calc((100% - 2rem) / 3);
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background-color: #ffffff;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 15%);
+}
+
+/* Espaço reservado para a foto, mantendo proporção mesmo sem imagem cadastrada. */
+.foto-item {
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e8e8e8;
+  color: #666666;
+  text-align: center;
+}
+
+.descricao {
+  margin: 0;
+  padding: 1rem;
+  line-height: 1.5;
+}
+
+/* Etiquetas visuais para mostrar a situação do item. */
+.status-item {
+  display: inline-block;
+  margin: 1rem 1rem 0;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background-color: #e8f5e9;
+  color: #246b2b;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.status-item.perdido {
+  background-color: #fff3e0;
+  color: #8a4b08;
+}
+
+/* Dados adicionais do anúncio, como nome do aluno e curso. */
+.dados-item {
+  margin: 0;
+  padding: 0 1rem 1rem;
+  line-height: 1.6;
+}
+
+.dados-item p {
+  margin: 0.25rem 0;
+}

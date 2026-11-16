@@ -1,0 +1,23 @@
+.main-section {
+    background-color: #EAB84F;
+    display: flex;
+    justify-content: center;
+}
+
+.caixa-upload {
+    margin-top: 5rem;
+    display: flexbox;
+    flex-direction: column;
+    width: 50%;
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 2rem;
+}
+
+#arquivoInput,
+#enviarBtn {
+    font-size: 1.5rem;
+    cursor: pointer;
+}

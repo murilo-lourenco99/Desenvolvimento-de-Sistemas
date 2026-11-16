@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Usuario</title>
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+    <!--Seção de formulario de login, com nome, email e função do usuario no sistema-->
+    <section class="form_login">
+        <form action="">
+            <div class="login_nome">
+                <label for="">Nome</label>
+                <input name="nome" type="text" placeholder="Digite seu nome">
+            </div>
+
+            <div class="login_email">
+                <label for="">E-mail Institucional</label>
+                <input name="e-mail" type="text" placeholder="Digite seu e-mail">
+            </div>
+
+            <div class="login_funcao">
+                <label for="">Você é um aluno ou coordenador?</label>
+
+                <label for="" class="sexo">
+                    <span>Aluno</span> <input name="sexo" value="Masculino" type="radio">
+                </label>
+                <label for="" class="sexo">
+                    <span>Coordenador</span> <input name="sexo" value="Feminino" type="radio">
+                </label>
+            </div>
+        </form>
+
+        <!--Botão que encaminha o usuario para o inicio do sistema e salva suas infromações de login-->
+        <div class="div_login_button">
+            <button class="login_button">
+                <label>Entrar no sistema</label>
+            </button>
+        </div>
+    </section>
+
+</body>
+<script src="./js/login.js"></script>
+
+</html>

@@ -1,0 +1,104 @@
+body {
+  /* Duas colunas: navegação lateral e conteúdo principal. */
+  display: grid;
+  grid-template-columns: minmax(180px, 20%) minmax(0, 1fr);
+  grid-template-rows: auto minmax(0, 1fr);
+  grid-template-areas:
+    "sidebar header"
+    "sidebar items";
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: #161616;
+  text-decoration: none;
+}
+
+header {
+  grid-area: header;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+aside {
+  grid-area: sidebar;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #9c2727;
+}
+
+aside nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+aside nav li {
+  margin-top: 0.75rem;
+}
+
+aside nav a {
+  color: #ffffff;
+}
+
+aside nav a:hover,
+aside nav a:focus-visible {
+  color: #f2f2f2;
+  text-decoration: underline;
+}
+
+/* Em tablets, reduz para dois cartões por linha. */
+@media (max-width: 768px) {
+  .caixa-item {
+    flex-basis: calc((100% - 1rem) / 2);
+  }
+}
+
+/* Em celulares, menu, título e conteúdo ficam empilhados. */
+@media (max-width: 600px) {
+  body {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+      "sidebar"
+      "header"
+      "items";
+  }
+
+  aside {
+    min-height: auto;
+    padding: 0.75rem;
+  }
+
+  aside nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  aside nav li + li {
+    margin-top: 0;
+  }
+
+  .caixa-item {
+    flex-basis: 100%;
+  }
+}

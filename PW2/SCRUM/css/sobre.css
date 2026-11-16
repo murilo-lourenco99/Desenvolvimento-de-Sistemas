@@ -1,0 +1,26 @@
+.conteudo-pagina {
+  background-color: #daa025;
+  color: #e7e4de;
+}
+
+.conteudo-pagina h2 {
+  color: #3c2b0c;
+}
+
+/* Conteúdo de texto usado na Home e na página Sobre. */
+.conteudo-pagina {
+  grid-area: items;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  padding: 1.5rem;
+}
+
+.conteudo-pagina h2 {
+  margin-top: 0;
+}
+
+.conteudo-pagina a {
+  font-weight: 700;
+  text-decoration: underline;
+}
