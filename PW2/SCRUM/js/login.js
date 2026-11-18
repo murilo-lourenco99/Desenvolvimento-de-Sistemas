@@ -8,3 +8,12 @@ function login(event) {
     // ENVIO PARA O INDEX DO SISTEMA
     window.location.href = '../pags/index.html';
 }
+
+const login_funcao = document.querySelector('.login_funcao')
+function funcaoLogin() {
+    if (login_funcao == 'Aluno') {
+        console.log("aluno")
+    } else {
+        console.log("teste")
+    }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<link rel="stylesheet" href="style.css">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Achados e Perdidos</title>
+
+</head>
+
+<body>
+
+  <!-- TELA DE LOGIN -->
+  <section id="tela-login">
+    <h1>Achados e Perdidos</h1>
+    <form id="form-login">
+      <input type="text" id="login-nome" placeholder="Seu nome" required>
+      <input type="email" id="login-email" placeholder="E-mail institucional" required>
+      <select id="login-funcao" required>
+        <option value="">Selecione a função</option>
+        <option value="Aluno">Aluno</option>
+        <option value="Coordenador">Coordenador</option>
+      </select>
+      <button type="submit">Entrar</button>
+    </form>
+  </section>
+
+  <!-- TELA PRINCIPAL -->
+  <section id="tela-app" class="oculto">
+    <header>
+      <h1>Achados e Perdidos</h1>
+      <div>
+        <span id="info-usuario"></span>
+        <button id="btn-sair">Sair</button>
+      </div>
+    </header>
+
+    <!-- SÓ O COORDENADOR VÊ -->
+    <div id="area-coordenador" class="oculto">
+      <button id="btn-novo-item">+ Adicionar item</button>
+      <form id="form-item" class="oculto">
+        <input type="hidden" id="item-id">
+        <input type="text" id="item-nome" placeholder="Nome do item (ex: Garrafa azul)" required>
+        <textarea id="item-descricao" placeholder="Descrição" required></textarea>
+        <input type="text" id="item-local" placeholder="Local onde foi encontrado/perdido" required>
+        <select id="item-tipo">
+          <option value="Achado">Achado</option>
+          <option value="Perdido">Perdido</option>
+        </select>
+        <button type="submit">Salvar</button>
+        <button type="button" id="btn-cancelar">Cancelar</button>
+      </form>
+    </div>
+
+    <div id="lista-itens"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

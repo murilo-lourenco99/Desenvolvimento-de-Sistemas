@@ -15,26 +15,22 @@ body {
 }
 
 .form_login {
-    width: 35%;
+
+}
+
+.tela_login {
+    width: auto;
     height: auto;
     padding: 2rem;
     background-color: #5569c0;
-    text-align: left;
     border-radius: 1rem;
     display: flex;
     gap: 1rem;
     flex-direction: column;
 }
 
-.login_funcao {
-    margin-top: 0.75rem;
-}
-
-.div_login_button {
-    text-align: center;
-}
-
 .login_button {
     width: 8rem;
     height: 2.5rem;
+    text-align: center;
 }

@@ -10,39 +10,52 @@
 
 <body>
     <!--Seção de formulario de login, com nome, email e função do usuario no sistema-->
-    <section class="form_login">
-        <form action="">
-            <div class="login_nome">
-                <label for="">Nome</label>
-                <input name="nome" type="text" placeholder="Digite seu nome">
-            </div>
+    <section class="tela_login">
+        <form action="" class="form_login">
+            <label for="">Nome</label>
+            <input type="text" class="login-nome" placeholder="Seu nome" required>
+            <!--o required deixa o campo obrigatorio-->
+            <label for="">E-mail</label>
+            <input type="text" class="login-email" placeholder="E-mail Institucional" required>
 
-            <div class="login_email">
-                <label for="">E-mail Institucional</label>
-                <input name="e-mail" type="text" placeholder="Digite seu e-mail">
-            </div>
+            <select class="login-funcao" required>
+                <option value="">Selecione a função</option>
+                <option value="Aluno" type="radio">Aluno</option>
+                <option value="Coordenador" type="radio">Coordenador</option>
+            </select>
 
-            <div class="login_funcao">
+            <!-- <div class="login_funcao">
                 <label for="">Você é um aluno ou coordenador?</label>
 
-                <label for="" class="sexo">
-                    <span>Aluno</span> <input name="sexo" value="Masculino" type="radio">
+                <label for="" class="funcao">
+                    <span>Aluno</span> <input name="funcao" value="Aluno" type="radio">
                 </label>
-                <label for="" class="sexo">
-                    <span>Coordenador</span> <input name="sexo" value="Feminino" type="radio">
+                <label for="" class="funcao">
+                    <span>Coordenador</span> <input name="funcao" value="Coordenador" type="radio">
                 </label>
-            </div>
+            </div> -->
         </form>
 
+        <!-- <section id="tela-login">
+            <h1>Achados e Perdidos</h1>
+            <form id="form-login">
+                <input type="text" id="login-nome" placeholder="Seu nome" required>
+                <input type="email" id="login-email" placeholder="E-mail institucional" required>
+                <select id="login-funcao" required>
+                    <option value="">Selecione a função</option>
+                    <option value="Aluno">Aluno</option>
+                    <option value="Coordenador">Coordenador</option>
+                </select>
+                <button type="submit">Entrar</button>
+            </form>
+        </section> -->
+
         <!--Botão que encaminha o usuario para o inicio do sistema e salva suas infromações de login-->
-        <div class="div_login_button">
-            <button class="login_button">
-                <label>Entrar no sistema</label>
-            </button>
-        </div>
+        <button type="submit" class="login_button">Entrar</button>
+
     </section>
 
 </body>
-<script src="./js/login.js"></script>
+<script src="./js/login.js" type="module"></script>
 
 </html>

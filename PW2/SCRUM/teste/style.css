@@ -1,0 +1,46 @@
+body {
+    font-family: system-ui, sans-serif;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.oculto {
+    display: none !important;
+}
+
+form {
+    display: grid;
+    gap: .5rem;
+    margin-bottom: 1.5rem;
+}
+
+input,
+select,
+button,
+textarea {
+    padding: .5rem;
+    font: inherit;
+}
+
+.item {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: .75rem;
+}
+
+.item .status {
+    font-size: .85rem;
+    color: #666;
+}
+
+.item.reservado {
+    opacity: .6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
